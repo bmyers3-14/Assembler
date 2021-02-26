@@ -1,0 +1,59 @@
+void finalout();
+
+std::string mainfile;   (global variable with vectors)
+
+ mainfile = filename;    (insert after cin where asks for file name) 
+
+
+
+void finaloutput() {
+	vector<string> obcodelist;
+	std::ifstream infile;
+	std::ofstream outfile;
+	std::string line;
+	int wordcount = 0;
+	int linecount = 0;
+	std::string finalmemory;
+
+
+	infile.open("Intermediate.txt");
+
+	if (infile.is_open()) {
+		outfile.open("finalout.txt");
+		
+		while (!infile.eof()) {
+			std::getline(infile, line);
+			std::stringstream ss(line);
+			while (std::getline(ss, word, '\t')) {
+				wordcount++;
+				linecount++;
+				//std::cout<< word<< wordcount <<std::endl;
+				if (wordcount == 5) {
+					opcodelist.push_back(word);
+					wordcount = 0;
+				}
+				else if (wordcount == 1) {
+					opcodelist.push_back(word);
+					finalmemory = word;
+				} else {
+					break;
+				}
+			}
+
+		}
+	}
+	if (outfile.is_open()) {
+		outfile << "H" << mainfile << "000000" << finalmemory << '/n';
+		
+		outfile << "T" << std::hex(linecount * 6);
+		while (int i=0 < opcodelist.length()) {
+			outfile << opcodelist[i];
+			i++;
+
+		}
+		outfile << '/n';
+		outfile << "E000000";
+
+	}
+
+}

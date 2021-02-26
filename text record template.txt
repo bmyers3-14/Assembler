@@ -1,0 +1,18 @@
+Header record
+H + file name(up to 6 digits) + starting address(6digits) + length of program (6 digits)
+
+define record (only if EXTDEF is used)
+D + NAME of external variable(6 digits) + relative adrress of variable(6 digits) + repeat as necessary
+
+Refer record
+R + Name of external reference(6 digits) + other names
+
+text record
+T + starting address for this line (6 digits) + length of object code/how many bytes in this line(2 digits) + opcode (upto 60 digits but shorten for readability)
+
+modification record
+M + address of field modified(6 digits) + length of field to be modified(in half bytes)(2 digits) + flag (+ or -) + external variable to be added to or subtract from
+
+
+end record
+E + starting address(6 digits)

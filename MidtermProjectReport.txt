@@ -1,0 +1,15 @@
+﻿	Mid-Term Final Project Report
+Benjamin Myers, Paice Fuller, and Jacob Warren
+Introduction
+	For this assignment, I, Benjamin Myers, will be teaming up with Paice Fuller and Jacob Warren. Our goal is to use C++ to implement the assembler. We chose C++ because we are familiar with it, and it is a language all of us are comfortable with. Paice has conveniently put together a UML styled diagram to help explain the layout of how we plan to go about programming this assignment in C++ to accomplish the implementation of the assembler.
+	We figured that we at least needed a table for the OP codes, and we need to read the file to know what is in it. The group has included two classes to handle these two objectives. Paice has added in several other potential classes we may need to add, but so far, we know that we need a main class and a class to handle OP codes.
+Data Structures and Objects
+	The main data structures will include a map, vector, and file stream.
+	OpCode Table and Main class
+Tasks
+	I am not sure who will do what on the project quite yet. We all have meetings through Zoom and accomplish our tasks by discussing it with each other. I figured we implement the file stream with the OP code table will be the hardest task for our group, so that may need to be done with at least a group of two. Considering it will need to get rid of any spaces or grammar included in the program. 
+	We will basically need to strip it down to what we need to execute the program; this may include another file or class. The file stream will have to probably include at least two passes through the files because there will most likely need to be another file for these two passes. 
+	
+
+End Goal
+	The end goal will be to have a program that parses through the input file. This input will pass through the file and input it into the table. The second pass would then write the opcode to execute the desired outcome.
